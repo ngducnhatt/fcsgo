@@ -1,7 +1,20 @@
-// src/components/ProductCard.jsx
 import React from "react";
 
-const ProductCard = ({ image, title, price, sold, rating, oldPrice }) => {
+const ProductCard = ({
+  image,
+  title,
+  price,
+  sold,
+  rating,
+  oldPrice,
+  onBuyClick,
+}) => {
+  const handleBuyClick = () => {
+    if (onBuyClick) {
+      onBuyClick({ image, title, price, sold, rating, oldPrice });
+    }
+  };
+
   return (
     <div className="product-card">
       <div className="product-card__image-wrapper">
@@ -22,7 +35,9 @@ const ProductCard = ({ image, title, price, sold, rating, oldPrice }) => {
           <span>⭐ {rating}</span>
         </div>
       )}
-      <button className="product-card__button">Mua ngay</button>
+      <button className="product-card__button" onClick={handleBuyClick}>
+        Mua ngay
+      </button>
     </div>
   );
 };

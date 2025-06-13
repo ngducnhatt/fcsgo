@@ -1,4 +1,3 @@
-// src/components/ProductListSection.jsx
 import React from "react";
 import ProductCard from "./ProductCard"; // Đảm bảo đường dẫn đúng
 
@@ -7,6 +6,7 @@ const ProductListSection = ({
   products,
   linkText = "Xem thêm",
   linkHref = "#",
+  onBuyClick,
 }) => {
   return (
     <section className="product-list-section">
@@ -26,6 +26,7 @@ const ProductListSection = ({
             sold={product.sold}
             rating={product.rating}
             oldPrice={product.oldPrice}
+            onBuyClick={onBuyClick}
           />
         ))}
       </div>

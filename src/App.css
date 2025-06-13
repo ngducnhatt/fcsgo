@@ -115,7 +115,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100%; /* Đảm bảo chiều cao đồng đều */
+  height: 50%; /* Đảm bảo chiều cao đồng đều */
 }
 
 .product-card__image-wrapper {
@@ -177,6 +177,11 @@ body {
   cursor: pointer;
   font-size: 1em;
   margin-top: auto; /* Đẩy nút xuống dưới cùng */
+  transition: background-color 0.3s ease;
+}
+
+.product-card__button:hover {
+  background-color: #38a169;
 }
 
 /* Product List Section */
@@ -219,6 +224,156 @@ body {
     minmax(180px, 1fr)
   ); /* Responsive grid */
   gap: 20px;
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.modal-content {
+  background-color: #2d3748;
+  border-radius: 12px;
+  padding: 30px;
+  max-width: 500px;
+  width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+  animation: slideIn 0.3s ease-out;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.modal-close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #a0aec0;
+  cursor: pointer;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
+
+.modal-close:hover {
+  background-color: #4a5568;
+  color: #e2e8f0;
+}
+
+.modal-body {
+  text-align: center;
+}
+
+.modal-product-info {
+  margin-bottom: 30px;
+}
+
+.modal-product-image {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  border: 2px solid #4a5568;
+}
+
+.modal-product-title {
+  font-size: 1.4em;
+  color: #e2e8f0;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.modal-product-price {
+  margin-bottom: 15px;
+}
+
+.modal-product-old-price {
+  text-decoration: line-through;
+  color: #a0aec0;
+  margin-right: 10px;
+  font-size: 1.1em;
+}
+
+.modal-product-current-price {
+  font-weight: bold;
+  color: #63b3ed;
+  font-size: 1.4em;
+}
+
+.modal-product-sold {
+  font-size: 1em;
+  color: #a0aec0;
+  margin-bottom: 10px;
+}
+
+.modal-product-rating {
+  font-size: 1.1em;
+  color: #ecc94b;
+  margin-bottom: 20px;
+}
+
+.modal-buy-button {
+  background: linear-gradient(135deg, #48bb78, #38a169);
+  color: white;
+  border: none;
+  padding: 15px 40px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(72, 187, 120, 0.3);
+}
+
+.modal-buy-button:hover {
+  background: linear-gradient(135deg, #38a169, #2f855a);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(72, 187, 120, 0.4);
+}
+
+.modal-buy-button:active {
+  transform: translateY(0);
 }
 
 /* Footer Styles */
@@ -289,4 +444,26 @@ body {
   color: #a0aec0;
   font-size: 0.9em;
   margin-top: 20px; /* Khoảng cách từ phần trên của footer */
+}
+
+/* Responsive Modal */
+@media (max-width: 768px) {
+  .modal-content {
+    padding: 20px;
+    margin: 20px;
+  }
+
+  .modal-product-image {
+    width: 120px;
+    height: 120px;
+  }
+
+  .modal-product-title {
+    font-size: 1.2em;
+  }
+
+  .modal-buy-button {
+    padding: 12px 30px;
+    font-size: 1.1em;
+  }
 }

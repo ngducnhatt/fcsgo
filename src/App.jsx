@@ -1,11 +1,13 @@
 // src/App.jsx
-import React from "react";
+import React, { useState } from "react";
 import Header from "./components/Header";
 import HeroSection from "./components/HeroSection";
 import CategoryNavigation from "./components/CategoryNavigation";
 import ProductListSection from "./components/ProductListSection";
 import Footer from "./components/Footer";
-import "./App.css"; 
+import Modal from "./components/Modal";
+import "./App.css";
+
 // Dữ liệu giả định cho các phần
 const popularProducts = [
   {
@@ -206,6 +208,19 @@ const gameGiftCards = [
 ];
 
 function App() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedProduct, setSelectedProduct] = useState(null);
+
+  const handleBuyClick = (product) => {
+    setSelectedProduct(product);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setSelectedProduct(null);
+  };
+
   return (
     <div className="app">
       <Header />
@@ -216,21 +231,47 @@ function App() {
           title="Sản phẩm nổi bật"
           products={popularProducts}
           linkText="Xem tất cả"
+          onBuyClick={handleBuyClick}
         />
         <ProductListSection
           title="Đề xuất cho bạn"
           products={recommendProducts}
+          onBuyClick={handleBuyClick}
         />
-        <ProductListSection title="Tài khoản Game" products={accountGames} />
-        <ProductListSection title="Mua/Bán thẻ cào" products={mobileCards} />
-        <ProductListSection title="Premium" products={premiumServices} />
+        <ProductListSection
+          title="Tài khoản Game"
+          products={accountGames}
+          onBuyClick={handleBuyClick}
+        />
+        <ProductListSection
+          title="Mua/Bán thẻ cào"
+          products={mobileCards}
+          onBuyClick={handleBuyClick}
+        />
+        <ProductListSection
+          title="Premium"
+          products={premiumServices}
+          onBuyClick={handleBuyClick}
+        />
         <ProductListSection
           title="Steam Gift Card / Steam Wallet Code"
           products={steamCards}
+          onBuyClick={handleBuyClick}
         />
-        <ProductListSection title="Game Gift Card" products={gameGiftCards} />
+        <ProductListSection
+          title="Game Gift Card"
+          products={gameGiftCards}
+          onBuyClick={handleBuyClick}
+        />
       </main>
       <Footer />
+
+      {/* Modal */}
+      <Modal
+        isOpen={isModalOpen}
+        onClose={closeModal}
+        product={selectedProduct}
+      />
     </div>
   );
 }
