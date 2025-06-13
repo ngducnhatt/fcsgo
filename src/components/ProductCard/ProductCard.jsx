@@ -1,22 +1,26 @@
 // src/components/ProductCard/ProductCard.jsx
-import React, { memo } from "react"; // 1. Import thêm memo
+import React, { memo } from "react";
+import { useModal } from "../../context/ModalContext"; // Import hook useModal
 import "./ProductCard.css";
 
-// 2. Bọc component bằng memo
-const ProductCard = memo(({ product, onCardClick }) => {
+const ProductCard = memo(({ product }) => {
   const { image, title, price, oldPrice, sold, status } = product;
+  const { openModal } = useModal(); // Lấy hàm openModal từ context
 
   const handleCardClick = () => {
-    if (status !== "disabled" && onCardClick) {
-      onCardClick(product);
+    // Chỉ mở modal nếu sản phẩm không bị vô hiệu hóa
+    if (status !== "disabled") {
+      openModal(product); // Gọi openModal và truyền dữ liệu sản phẩm vào
     }
   };
+
   const cardClassName = `product-card ${
     status === "disabled" ? "product-card--disabled" : ""
   }`;
 
   return (
     <div className={cardClassName} onClick={handleCardClick}>
+      {/* Nội dung còn lại giữ nguyên */}
       <div className="product-card__image-container">
         <img src={image} alt={title} className="product-card__image" />
       </div>
@@ -38,7 +42,6 @@ const ProductCard = memo(({ product, onCardClick }) => {
               🛒 Hết hàng
             </span>
           )}
-          {/* Sửa lỗi logic hiển thị tại đây */}
           {sold !== undefined && (
             <span className="product-card__sold">Đã bán {sold}</span>
           )}

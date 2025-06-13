@@ -1,6 +1,7 @@
 /* src/index.css */
 html {
   scroll-behavior: smooth;
+  /* Giữ font-size mặc định (16px) để tính toán rem dễ dàng */
 }
 
 :root {
@@ -13,8 +14,8 @@ html {
   --color-text-secondary: #8a93a7;
   --color-border: #2a2f42;
 
-  --border-radius-md: 8px;
-  --border-radius-lg: 12px;
+  --border-radius-md: 0.5rem; /* 8px */
+  --border-radius-lg: 0.75rem; /* 12px */
 }
 
 body {
@@ -43,5 +44,5 @@ button {
   background: none;
 }
 [id] {
-  scroll-margin-top: 80px; 
+  scroll-margin-top: 5rem; /* 80px */
 }

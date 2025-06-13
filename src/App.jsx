@@ -1,5 +1,5 @@
 // src/App.jsx
-import React, { useState, useCallback } from "react";
+import React from "react";
 
 // Components
 import Header from "./components/Header/Header";
@@ -7,14 +7,11 @@ import HeroSection from "./components/HeroSection/HeroSection";
 import CategoryNavigation from "./components/CategoryNavigation/CategoryNavigation";
 import ProductListSection from "./components/ProductListSection/ProductListSection";
 import Footer from "./components/Footer/Footer";
-import Modal from "./components/Modal/Modal";
 import BackToTopButton from "./components/BackToTopButton/BackToTopButton";
 
-// --- Dữ liệu ---
-// 1. Import file cấu hình trung tâm
+// Dữ liệu
 import productsData from "./data/products.json";
 import bannerData from "./data/banners.json";
-// 2. Import tất cả dữ liệu sản phẩm tương ứng
 import accountGamesData from "./data/accountsGame.json";
 import coinEmpireData from "./data/coinEmpire.json";
 import mobileCardData from "./data/mobileCard.json";
@@ -25,7 +22,6 @@ import exitlagData from "./data/exitlagCode.json";
 // Styles
 import "./App.css";
 
-// 3. Tạo một "data map" để ánh xạ dataKey trong JSON với biến dữ liệu thực tế
 const dataMap = {
   accountGamesData,
   coinEmpireData,
@@ -36,26 +32,13 @@ const dataMap = {
 };
 
 function App() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [selectedProduct, setSelectedProduct] = useState(null);
-
-  // 2. Bọc hàm bằng useCallback
-  const handleCardClick = useCallback((product) => {
-    setSelectedProduct(product);
-    setIsModalOpen(true);
-  }, []); // Dependencies rỗng vì hàm không phụ thuộc vào state hay props nào từ bên ngoài
-
-  // 3. Bọc hàm bằng useCallback
-  const closeModal = useCallback(() => {
-    setIsModalOpen(false);
-  }, []);
+  // Toàn bộ state và hàm xử lý modal đã được chuyển vào ModalContext!
+  // App.jsx giờ đây sạch sẽ hơn rất nhiều.
 
   return (
     <div className="app-container">
       <Header navItems={productsData} />
-
-      <HeroSection bannerData={bannerData} />
-
+      {/* <HeroSection bannerData={bannerData} /> */}
       <main>
         <CategoryNavigation categories={productsData} />
 
@@ -65,18 +48,13 @@ function App() {
             id={section.id}
             title={section.title}
             products={dataMap[section.dataKey]}
-            onCardClick={handleCardClick}
+            // onCardClick không còn cần thiết ở đây nữa
           />
         ))}
       </main>
 
       <Footer />
-
-      <Modal
-        isOpen={isModalOpen}
-        onClose={closeModal}
-        product={selectedProduct}
-      />
+      {/* Modal sẽ được render bởi ModalProvider */}
       <BackToTopButton />
     </div>
   );

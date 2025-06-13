@@ -37,7 +37,7 @@ const Footer = () => {
           {/* 2. Thêm khu vực cho các icon mạng xã hội */}
           <div className="footer__socials">
             <a
-              href="https://facebook.com/your-page"
+              href="https://www.facebook.com/100092840949249"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Facebook"
@@ -45,7 +45,7 @@ const Footer = () => {
               <FaFacebook />
             </a>
             <a
-              href="https://discord.com/your-server"
+              href="https://discord.com"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Discord"

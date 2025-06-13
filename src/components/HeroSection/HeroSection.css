@@ -1,8 +1,9 @@
+/* src/components/HeroSection/HeroSection.css */
 .hero-section {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
-  padding: 24px 0;
+  gap: 1rem; /* 16px */
+  padding: 1.5rem 0; /* 24px */
 }
 
 .hero-section__item img {
@@ -13,11 +14,11 @@
 }
 
 .hero-section__item:hover img {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-0.25rem); /* -4px */
+  box-shadow: 0 0.5rem 1.25rem rgba(0, 0, 0, 0.2); /* 0 8px 20px */
 }
 
-@media (max-width: 768px) {
+@media (max-width: 48em) { /* 768px */
   .hero-section {
       grid-template-columns: repeat(2, 1fr);
   }

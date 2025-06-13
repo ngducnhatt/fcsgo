@@ -1,7 +1,8 @@
+/* src/components/CategoryNavigation/CategoryNavigation.css */
 .category-nav {
     background-color: var(--color-surface);
     border-radius: var(--border-radius-lg);
-    padding: 12px;
+    padding: 0.75rem; /* 12px */
 }
 
 .category-nav ul {
@@ -9,15 +10,15 @@
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 0.5rem; /* 8px */
 }
 
 .category-nav__link {
     display: flex;
     align-items: center;
-    gap: 8px;
-    padding: 8px 12px;
-    font-size: 14px;
+    gap: 0.5rem; /* 8px */
+    padding: 0.5rem 0.75rem; /* 8px 12px */
+    font-size: 0.875rem; /* 14px */
     font-weight: 500;
     border-radius: var(--border-radius-md);
     color: var(--color-text-secondary);
@@ -30,5 +31,5 @@
 }
 
 .category-nav__icon {
-    font-size: 18px;
+    font-size: 1.125rem; /* 18px */
 }

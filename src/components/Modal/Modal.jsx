@@ -56,7 +56,14 @@ const Modal = ({ isOpen, onClose, product }) => {
             <p className="modal-confirmation-text">
               Hãy liên hệ qua Facebook của mình nha
             </p>
-            <button className="modal-buy-button">Facebook</button>
+            <button className="modal-buy-button">
+              <a
+                href="https://www.facebook.com/100092840949249"
+                target="_blank"
+              >
+                Facebook
+              </a>
+            </button>
           </div>
         </div>
       </div>

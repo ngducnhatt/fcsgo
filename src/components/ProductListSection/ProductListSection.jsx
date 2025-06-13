@@ -3,7 +3,8 @@ import React from "react";
 import ProductCard from "../ProductCard/ProductCard";
 import "./ProductListSection.css";
 
-const ProductListSection = ({ id, title, products, onCardClick }) => {
+// Bỏ prop onCardClick
+const ProductListSection = ({ id, title, products }) => {
   return (
     <section id={id} className="product-list-section">
       <div className="product-list-section__header">
@@ -17,7 +18,7 @@ const ProductListSection = ({ id, title, products, onCardClick }) => {
           <ProductCard
             key={product.id}
             product={product}
-            onCardClick={onCardClick}
+            // Không cần truyền onCardClick
           />
         ))}
       </div>

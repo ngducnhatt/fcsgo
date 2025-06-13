@@ -1,34 +1,34 @@
-/* === Cấu trúc chung của Footer === */
+/* src/components/Footer/Footer.css */
 .footer {
-  margin-top: 60px;
-  padding-top: 40px;
+  margin-top: 3.75rem; /* 60px */
+  padding-top: 2.5rem; /* 40px */
   border-top: 1px solid var(--color-border);
 }
 
 .footer__container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 32px;
-  margin-bottom: 40px;
+  gap: 2rem; /* 32px */
+  margin-bottom: 2.5rem; /* 40px */
 }
 
 .footer__section h3 {
-  font-size: 16px;
+  font-size: 1rem; /* 16px */
   font-weight: 600;
   color: var(--color-text-primary);
-  margin: 0 0 16px 0;
+  margin: 0 0 1rem 0; /* 16px */
 }
 
 .footer__section ul {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 0.75rem; /* 12px */
 }
 
 .footer__section p, .footer__section a {
-  font-size: 14px;
+  font-size: 0.875rem; /* 14px */
   color: var(--color-text-secondary);
-  margin: 0 0 8px 0;
+  margin: 0 0 0.5rem 0; /* 8px */
   transition: color 0.2s;
 }
 
@@ -36,55 +36,45 @@
   color: var(--color-accent);
 }
 
-/* === Kiểu cho các icon (ĐÃ CẬP NHẬT) === */
-
-/* --- Kiểu cho icon mạng xã hội --- */
 .footer__socials {
   display: flex;
-  gap: 20px; /* Tăng khoảng cách một chút */
-  margin-top: 12px;
+  gap: 1.25rem; /* 20px */
+  margin-top: 0.75rem; /* 12px */
 }
 
 .footer__socials a {
-  color: var(--color-text-secondary); /* Dùng màu phụ của trang web */
-  /* Thay đổi kích thước icon social ở đây */
-  font-size: 24px; /* <-- TĂNG KÍCH THƯỚC ICON SOCIAL */
+  color: var(--color-text-secondary);
+  font-size: 1.5rem; /* 24px */
   transition: color 0.3s ease;
 }
 
 .footer__socials a:hover {
-  color: var(--color-accent); /* Đổi sang màu nhấn khi hover */
+  color: var(--color-accent);
 }
 
-
-/* --- Kiểu cho icon phương thức thanh toán --- */
 .footer__payment-methods {
   display: flex;
   align-items: center;
-  gap: 16px; /* Tăng khoảng cách một chút */
-  margin-top: 16px;
+  gap: 1rem; /* 16px */
+  margin-top: 1rem; /* 16px */
   color: var(--color-text-secondary);
-  /* Thay đổi kích thước icon thanh toán ở đây */
-  font-size: 36px; /* <-- TĂNG KÍCH THƯỚC ICON THANH TOÁN */
+  font-size: 2.25rem; /* 36px */
 }
 
-/* === Phần Copyright === */
 .footer__copyright {
   text-align: center;
-  padding: 24px 0;
+  padding: 1.5rem 0; /* 24px */
   border-top: 1px solid var(--color-border);
   color: var(--color-text-secondary);
-  font-size: 13px;
+  font-size: 0.8125rem; /* 13px */
 }
 
-/* === Responsive === */
-@media (max-width: 768px) {
+@media (max-width: 48em) { /* 768px */
   .footer__container {
       grid-template-columns: 1fr;
       text-align: center;
   }
   
-  /* Căn giữa các icon trên mobile */
   .footer__socials, .footer__payment-methods {
     justify-content: center;
   }

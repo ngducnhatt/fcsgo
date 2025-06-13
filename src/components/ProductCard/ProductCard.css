@@ -1,9 +1,10 @@
+/* src/components/ProductCard/ProductCard.css */
 .product-card {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 1rem; /* 16px */
   background-color: var(--color-surface);
-  padding: 12px;
+  padding: 0.75rem; /* 12px */
   border-radius: var(--border-radius-lg);
   border: 1px solid var(--color-border);
   transition: border-color 0.2s ease, background-color 0.2s ease;
@@ -16,8 +17,8 @@
 }
 
 .product-card__image-container {
-  width: 64px;
-  height: 80px;
+  width: 4rem; /* 64px */
+  height: 5rem; /* 80px */
   flex-shrink: 0;
 }
 
@@ -32,13 +33,13 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 8px;
+  gap: 0.5rem; /* 8px */
   flex-grow: 1;
   min-width: 0;
 }
 
 .product-card__title {
-  font-size: 15px;
+  font-size: 0.9375rem; /* 15px */
   font-weight: 600;
   color: var(--color-text-primary);
   white-space: nowrap;
@@ -49,17 +50,17 @@
 .product-card__price-line {
   display: flex;
   align-items: baseline;
-  gap: 8px;
+  gap: 0.5rem; /* 8px */
 }
 
 .product-card__price {
-  font-size: 16px;
+  font-size: 1rem; /* 16px */
   font-weight: 700;
   color: var(--color-accent);
 }
 
 .product-card__old-price {
-  font-size: 13px;
+  font-size: 0.8125rem; /* 13px */
   text-decoration: line-through;
   color: var(--color-text-secondary);
 }
@@ -67,38 +68,29 @@
 .product-card__meta {
   display: flex;
   align-items: center;
-  gap: 12px;
-  font-size: 13px;
+  gap: 0.75rem; /* 12px */
+  font-size: 0.8125rem; /* 13px */
   color: var(--color-text-secondary);
 }
 
-
-
-*/
-
-/* Style chung cho text trạng thái */
 .product-card__status {
   font-weight: 600;
-  font-size: 13px;
+  font-size: 0.8125rem; /* 13px */
 }
 
-/* Style cho trạng thái "Còn hàng" */
 .product-card__status--in-stock {
   color: #48bb78; /* Màu xanh lá */
 }
 
-/* Style cho trạng thái "Hết hàng" */
 .product-card__status--out-of-stock {
   color: #f56565; /* Màu đỏ */
 }
 
-/* Style cho thẻ bị vô hiệu hóa */
 .product-card--disabled {
   opacity: 0.5;
   cursor: not-allowed;
 }
 
-/* Tắt hiệu ứng hover trên thẻ bị vô hiệu hóa */
 .product-card--disabled:hover {
   border-color: var(--color-border);
   background-color: var(--color-surface);
