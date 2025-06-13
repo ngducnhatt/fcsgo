@@ -1,5 +1,5 @@
 // src/App.jsx
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
 
 // Components
 import Header from "./components/Header/Header";
@@ -39,14 +39,16 @@ function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState(null);
 
-  const handleCardClick = (product) => {
+  // 2. Bọc hàm bằng useCallback
+  const handleCardClick = useCallback((product) => {
     setSelectedProduct(product);
     setIsModalOpen(true);
-  };
+  }, []); // Dependencies rỗng vì hàm không phụ thuộc vào state hay props nào từ bên ngoài
 
-  const closeModal = () => {
+  // 3. Bọc hàm bằng useCallback
+  const closeModal = useCallback(() => {
     setIsModalOpen(false);
-  };
+  }, []);
 
   return (
     <div className="app-container">

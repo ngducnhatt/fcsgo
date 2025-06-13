@@ -1,7 +1,9 @@
-import React from "react";
+// src/components/ProductCard/ProductCard.jsx
+import React, { memo } from "react"; // 1. Import thêm memo
 import "./ProductCard.css";
 
-const ProductCard = ({ product, onCardClick }) => {
+// 2. Bọc component bằng memo
+const ProductCard = memo(({ product, onCardClick }) => {
   const { image, title, price, oldPrice, sold, status } = product;
 
   const handleCardClick = () => {
@@ -12,6 +14,7 @@ const ProductCard = ({ product, onCardClick }) => {
   const cardClassName = `product-card ${
     status === "disabled" ? "product-card--disabled" : ""
   }`;
+
   return (
     <div className={cardClassName} onClick={handleCardClick}>
       <div className="product-card__image-container">
@@ -35,12 +38,14 @@ const ProductCard = ({ product, onCardClick }) => {
               🛒 Hết hàng
             </span>
           )}
-
-          <span className="product-card__sold">Đã bán {sold}</span>
+          {/* Sửa lỗi logic hiển thị tại đây */}
+          {sold !== undefined && (
+            <span className="product-card__sold">Đã bán {sold}</span>
+          )}
         </div>
       </div>
     </div>
   );
-};
+});
 
 export default ProductCard;
