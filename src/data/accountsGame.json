@@ -1,0 +1,16 @@
+[
+  {
+    "id": "game-01",
+    "image": "/lol-pbe.webp",
+    "title": "Tài khoản LOL PBE",
+    "price": "5.000đ",
+    "status": "enabled"
+  },
+  {
+    "id": "game-02",
+    "image": "/valorant.webp",
+    "title": "Tài khoản Valorant level 20",
+    "price": "15.000đ",
+    "status": "disabled"
+  }
+]

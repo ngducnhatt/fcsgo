@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "image": "/images/promo-banner-1.png",
+    "alt": "Mua coin Empire"
+  },
+  {
+    "id": 2,
+    "image": "/images/promo-banner-2.png",
+    "alt": "Thu mua thẻ cào"
+  },
+  {
+    "id": 3,
+    "image": "/images/promo-banner-3.png",
+    "alt": "Steam wallet code"
+  },
+  {
+    "id": 4,
+    "image": "/images/promo-banner-4.png",
+    "alt": "Dịch vụ Premium"
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "id": "steam-card-5-usd",
+    "image": "steam5usd.webp",
+    "title": "Steam Card 5 USD",
+    "price": "133.000đ",
+    "sold": "187",
+    "status": "enabled"
+  },
+  {
+    "id": "steam-card-10-usd",
+    "image": "steam10usd.webp",
+    "title": "Steam Card 10 USD",
+    "price": "266.000đ",
+    "sold": "187",
+    "status": "enabled"
+  }
+]
