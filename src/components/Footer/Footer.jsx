@@ -15,7 +15,7 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer__container">
         <div className="footer__section">
-          <h3>F STORE</h3>
+          <h3>F CSGO</h3>
           <ul>
             <li>
               <a href="#">Điều khoản dịch vụ</a>
@@ -30,7 +30,7 @@ const Footer = () => {
           <p>
             Email:
             <a href="mailto:fstore.hotro@gmail.com" target="_blank">
-              <span> fstore.hotro@gmail.com</span>
+              <span> fcsgo.hotro@gmail.com</span>
             </a>
           </p>
 
@@ -64,7 +64,7 @@ const Footer = () => {
       </div>
       <div className="footer__copyright">
         <p>
-          Copyright © {new Date().getFullYear()} F-Store. All rights reserved.
+          Copyright © {new Date().getFullYear()} F Csgo. All rights reserved.
         </p>
       </div>
     </footer>
