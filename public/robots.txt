@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://fcsgo.vercel.app/sitemap.xml
