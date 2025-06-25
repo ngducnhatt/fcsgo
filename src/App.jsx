@@ -45,7 +45,7 @@ function App() {
           <Routes>
             <Route path="/" element={<HomePage categories={productsData} dataMap={dataMap} />} />
             <Route path="/account-game" element={<AccountGame />} />
-            <Route path="/coin-empire" element={<EmpirePage />} />
+            <Route path="/empire" element={<EmpirePage />} />
             <Route path="/mobile-card" element={<MobileCard />} />
             <Route path="/steam" element={<Steam />} />
             <Route path="/faceit" element={<Faceit />} />

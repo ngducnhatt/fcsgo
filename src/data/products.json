@@ -1,15 +1,15 @@
 [
   {
+    "id": "empire",
+    "title": "Thu Value Empire",
+    "dataKey": "coinEmpire",
+    "icon": "🪙"
+  },
+  {
     "id": "account-game",
     "title": "Tài khoản Game",
     "dataKey": "accountsGame",
     "icon": "🎮"
-  },
-  {
-    "id": "coin-empire",
-    "title": "Mua Coin Empire",
-    "dataKey": "coinEmpire",
-    "icon": "🪙"
   },
   {
     "id": "mobile-card",

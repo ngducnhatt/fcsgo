@@ -8,7 +8,7 @@
       "id": "exitlag-1-month",
       "image": "exitlag1month.webp",
       "title": "Code ExitLag 1 tháng",
-      "price": "155.000đ",
+      "price": "65.000đ",
       "sold": "190",
       "status": "enabled"
     },
@@ -16,9 +16,9 @@
       "id": "exitlag-3-month",
       "image": "exitlag3month.webp",
       "title": "Code ExitLag 3 tháng",
-      "price": "485.000đ",
+      "price": "65.000đ",
       "sold": "60",
-      "status": "enabled"
+      "status": "disabled"
     },
     {
       "id": "exitlag-12-month",

@@ -1,14 +1,14 @@
 {
-  "id": "coin-empire",
-  "title": "Mua Coin Empire",
+  "id": "empire",
+  "title": "Thu Value Empire",
   "dataKey": "coinEmpire",
   "icon": "🪙",
   "data": [
     {
       "id": "empire-buy",
       "image": "/csgoempire.webp",
-      "title": "Mua Coin Empire",
-      "price": 16.1,
+      "title": "Thu Value Empire",
+      "price": 16.15,
       "sold": "10.5k",
       "status": "enabled"
     }
