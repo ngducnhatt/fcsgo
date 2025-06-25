@@ -1,5 +1,6 @@
 // src/components/Header/Header.jsx
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "./Header.css";
 
 const Header = ({ navItems }) => {
@@ -11,9 +12,9 @@ const Header = ({ navItems }) => {
 
   return (
     <header className="header">
-      <a href="/" className="header__logo">
+      <Link to="/" className="header__logo">
         <img src="/logo.svg" alt="F-Store Logo" />
-      </a>
+      </Link>
 
       <nav className={`header__nav ${isMenuOpen ? "header__nav--open" : ""}`}>
         <ul>
@@ -23,13 +24,12 @@ const Header = ({ navItems }) => {
             </button>
           </li>
 
-          {/* 2. Tự động render các mục menu từ prop navItems */}
           {navItems &&
             navItems.map((item) => (
               <li key={item.id}>
-                <a href={`#${item.id}`} onClick={toggleMenu}>
+                <Link to={item.id} onClick={toggleMenu}>
                   {item.title}
-                </a>
+                </Link>
               </li>
             ))}
         </ul>

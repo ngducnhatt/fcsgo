@@ -2,37 +2,37 @@
   {
     "id": "account-game",
     "title": "Tài khoản Game",
-    "dataKey": "accountGamesData",
+    "dataKey": "accountsGame",
     "icon": "🎮"
   },
   {
     "id": "coin-empire",
     "title": "Mua Coin Empire",
-    "dataKey": "coinEmpireData",
+    "dataKey": "coinEmpire",
     "icon": "🪙"
   },
   {
     "id": "mobile-card",
     "title": "Mua/bán thẻ cào",
-    "dataKey": "mobileCardData",
+    "dataKey": "mobileCard",
     "icon": "💳"
   },
   {
     "id": "steam",
     "title": "Steam Wallet Code",
-    "dataKey": "steamCardData",
+    "dataKey": "steamCard",
     "icon": "🎁"
   },
   {
     "id": "faceit",
     "title": "Faceit Premium",
-    "dataKey": "faceitData",
+    "dataKey": "faceit",
     "icon": "⭐"
   },
   {
     "id": "exitlag",
     "title": "ExitLag Code",
-    "dataKey": "exitlagData",
+    "dataKey": "exitlag",
     "icon": "⭐"
   }
 ]

@@ -1,50 +1,56 @@
-[
-  {
-    "id": "faceit-change-name",
-    "image": "faceitchangename.webp",
-    "title": "Đổi tên Faceit",
-    "price": "30.000đ",
-    "sold": "1.1k",
-    "status": "enabled"
-  },
-  {
-    "id": "faceit-change-name-idle",
-    "image": "faceitchangenameidle.webp",
-    "title": "Đổi tên Faceit (idle nickname)",
-    "price": "140.000đ",
-    "sold": "50",
-    "status": "enabled"
-  },
-  {
-    "id": "faceit-premium-1-month",
-    "image": "faceitpremium1month.webp",
-    "title": "Faeit Premium 1 tháng",
-    "price": "210.000đ",
-    "sold": "67",
-    "status": "enabled"
-  },
-  {
-    "id": "faceit-premium-12-month",
-    "image": "faceitpremium12month.webp",
-    "title": "Faeit Premium 12 tháng",
-    "price": "1.825.000đ",
-    "sold": "13",
-    "status": "enabled"
-  },
-  {
-    "id": "faceit-plus-1-month",
-    "image": "faceitplus1month.webp",
-    "title": "Faeit Plus 1 tháng",
-    "price": "130.000đ",
-    "sold": "62",
-    "status": "enabled"
-  },
-  {
-    "id": "faceit-plus-12-month",
-    "image": "faceitplus12month.webp",
-    "title": "Faeit Plus 12 tháng",
-    "price": "910.000đ",
-    "sold": "32",
-    "status": "enabled"
-  }
-]
+{
+  "id": "faceit",
+  "title": "Faceit Premium",
+  "dataKey": "faceit",
+  "icon": "⭐",
+  "data": [
+    {
+      "id": "faceit-change-name",
+      "image": "faceitchangename.webp",
+      "title": "Đổi tên Faceit",
+      "price": "30.000đ",
+      "sold": "1.1k",
+      "status": "enabled"
+    },
+    {
+      "id": "faceit-change-name-idle",
+      "image": "faceitchangenameidle.webp",
+      "title": "Đổi tên Faceit (idle nickname)",
+      "price": "140.000đ",
+      "sold": "50",
+      "status": "enabled"
+    },
+    {
+      "id": "faceit-premium-1-month",
+      "image": "faceitpremium1month.webp",
+      "title": "Faeit Premium 1 tháng",
+      "price": "210.000đ",
+      "sold": "67",
+      "status": "enabled"
+    },
+    {
+      "id": "faceit-premium-12-month",
+      "image": "faceitpremium12month.webp",
+      "title": "Faeit Premium 12 tháng",
+      "price": "1.825.000đ",
+      "sold": "13",
+      "status": "enabled"
+    },
+    {
+      "id": "faceit-plus-1-month",
+      "image": "faceitplus1month.webp",
+      "title": "Faeit Plus 1 tháng",
+      "price": "130.000đ",
+      "sold": "62",
+      "status": "enabled"
+    },
+    {
+      "id": "faceit-plus-12-month",
+      "image": "faceitplus12month.webp",
+      "title": "Faeit Plus 12 tháng",
+      "price": "910.000đ",
+      "sold": "32",
+      "status": "enabled"
+    }
+  ]
+}

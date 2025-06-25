@@ -1,18 +1,24 @@
-[
-  {
-    "id": "steam-card-5-usd",
-    "image": "steam5usd.webp",
-    "title": "Steam Card 5 USD",
-    "price": "133.000đ",
-    "sold": "1.1k",
-    "status": "enabled"
-  },
-  {
-    "id": "steam-card-10-usd",
-    "image": "steam10usd.webp",
-    "title": "Steam Card 10 USD",
-    "price": "266.000đ",
-    "sold": "2.8k",
-    "status": "enabled"
-  }
-]
+{
+  "id": "steam",
+  "title": "Steam Wallet Code",
+  "dataKey": "steamCard",
+  "icon": "🎁",
+  "data": [
+    {
+      "id": "steam-card-5-usd",
+      "image": "steam5usd.webp",
+      "title": "Steam Card 5 USD",
+      "price": "133.000đ",
+      "sold": "1.1k",
+      "status": "enabled"
+    },
+    {
+      "id": "steam-card-10-usd",
+      "image": "steam10usd.webp",
+      "title": "Steam Card 10 USD",
+      "price": "266.000đ",
+      "sold": "2.8k",
+      "status": "enabled"
+    }
+  ]
+}
