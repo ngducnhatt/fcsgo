@@ -1,18 +1,24 @@
-[
-  {
-    "id": "buy-mobile-card",
-    "image": "cardmobile.webp",
-    "title": "Thu, Mua, Cà thẻ cào các loại (Viettel, Mobifone, Vinaphone, Zing, Garena, Vcoin)",
-    "price": "Rate: 0.85 ~ 0.9",
-    "sold": "8.5k",
-    "status": "enabled"
-  },
-  {
-    "id": "sell-mobile-card",
-    "image": "sellcardmobile.webp",
-    "title": "Nạp tài khoản điện thoại trả trước trả sau (Viettel, Mobifone, Vinaphone)",
-    "price": "Rate: 0.9 ~ 0.97",
-    "sold": "504",
-    "status": "enabled"
-  }
-]
+{
+  "id": "mobile-card",
+  "title": "Mua/bán thẻ cào",
+  "dataKey": "mobileCard",
+  "icon": "💳",
+  "data": [
+    {
+      "id": "buy-mobile-card",
+      "image": "cardmobile.webp",
+      "title": "Thu, Mua, Cà thẻ cào các loại (Viettel, Mobifone, Vinaphone, Zing, Garena, Vcoin)",
+      "price": "Rate: 0.85 ~ 0.9",
+      "sold": "8.5k",
+      "status": "enabled"
+    },
+    {
+      "id": "sell-mobile-card",
+      "image": "sellcardmobile.webp",
+      "title": "Nạp tài khoản điện thoại trả trước trả sau (Viettel, Mobifone, Vinaphone)",
+      "price": "Rate: 0.9 ~ 0.97",
+      "sold": "504",
+      "status": "enabled"
+    }
+  ]
+}

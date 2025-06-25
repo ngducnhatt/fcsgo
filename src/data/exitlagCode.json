@@ -1,26 +1,32 @@
-[
-  {
-    "id": "exitlag-1-month",
-    "image": "exitlag1month.webp",
-    "title": "Code ExitLag 1 tháng",
-    "price": "155.000đ",
-    "sold": "190",
-    "status": "enabled"
-  },
-  {
-    "id": "exitlag-3-month",
-    "image": "exitlag3month.webp",
-    "title": "Code ExitLag 3 tháng",
-    "price": "485.000đ",
-    "sold": "60",
-    "status": "enabled"
-  },
-  {
-    "id": "exitlag-12-month",
-    "image": "exitlag12month.webp",
-    "title": "Code ExitLag 12 tháng",
-    "price": "100.000đ",
-    "sold": "1.2k",
-    "status": "disabled"
-  }
-]
+{
+  "id": "exitlag",
+  "title": "ExitLag Code",
+  "dataKey": "exitlag",
+  "icon": "⭐",
+  "data": [
+    {
+      "id": "exitlag-1-month",
+      "image": "exitlag1month.webp",
+      "title": "Code ExitLag 1 tháng",
+      "price": "155.000đ",
+      "sold": "190",
+      "status": "enabled"
+    },
+    {
+      "id": "exitlag-3-month",
+      "image": "exitlag3month.webp",
+      "title": "Code ExitLag 3 tháng",
+      "price": "485.000đ",
+      "sold": "60",
+      "status": "enabled"
+    },
+    {
+      "id": "exitlag-12-month",
+      "image": "exitlag12month.webp",
+      "title": "Code ExitLag 12 tháng",
+      "price": "100.000đ",
+      "sold": "1.2k",
+      "status": "disabled"
+    }
+  ]
+}

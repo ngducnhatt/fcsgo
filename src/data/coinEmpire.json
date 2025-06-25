@@ -1,10 +1,16 @@
-[
-  {
-    "id": "empire-buy",
-    "image": "/csgoempire.webp",
-    "title": "Mua Coin Empire (hơn thị trường 0.05)",
-    "price": 16.1,
-    "sold": "10.5k",
-    "status": "enabled"
-  }
-]
+{
+  "id": "coin-empire",
+  "title": "Mua Coin Empire",
+  "dataKey": "coinEmpire",
+  "icon": "🪙",
+  "data": [
+    {
+      "id": "empire-buy",
+      "image": "/csgoempire.webp",
+      "title": "Mua Coin Empire",
+      "price": 16.1,
+      "sold": "10.5k",
+      "status": "enabled"
+    }
+  ]
+}

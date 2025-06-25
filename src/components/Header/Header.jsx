@@ -24,7 +24,6 @@ const Header = ({ navItems }) => {
             </button>
           </li>
 
-          {/* 2. Tự động render các mục menu từ prop navItems */}
           {navItems &&
             navItems.map((item) => (
               <li key={item.id}>

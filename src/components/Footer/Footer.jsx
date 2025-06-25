@@ -9,6 +9,7 @@ import {
   FaUniversity,
 } from "react-icons/fa";
 import "./Footer.css";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -18,10 +19,10 @@ const Footer = () => {
           <h3>F CSGO</h3>
           <ul>
             <li>
-              <a href="#">Điều khoản dịch vụ</a>
+              <Link to="/terms-of-service">Điều khoản dịch vụ</Link>
             </li>
             <li>
-              <a href="#">Chính sách bảo mật</a>
+              <Link to="/warranty-policy">Chính sách bảo hành</Link>
             </li>
           </ul>
         </div>

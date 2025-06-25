@@ -1,26 +1,32 @@
-[
-  {
-    "id": "game-01",
-    "image": "/lol-pbe.webp",
-    "title": "Tài khoản LOL PBE",
-    "price": "5.000đ",
-    "sold": "156",
-    "status": "disabled"
-  },
-  {
-    "id": "game-02",
-    "image": "/valorant.webp",
-    "title": "Tài khoản Valorant level 20",
-    "price": "15.000đ",
-    "sold": "56",
-    "status": "disabled"
-  },
-  {
-    "id": "game-03",
-    "image": "/valorant.webp",
-    "title": "Tài khoản Valorant night market",
-    "price": "15.000đ",
-    "sold": "19",
-    "status": "disabled"
-  }
-]
+{
+  "id": "account-game",
+  "title": "Tài khoản Game",
+  "dataKey": "accountsGame",
+  "icon": "🎮",
+  "data": [
+    {
+      "id": "game-01",
+      "image": "/lol-pbe.webp",
+      "title": "Tài khoản LOL PBE",
+      "price": "5.000đ",
+      "sold": "156",
+      "status": "disabled"
+    },
+    {
+      "id": "game-02",
+      "image": "/valorant.webp",
+      "title": "Tài khoản Valorant level 20",
+      "price": "15.000đ",
+      "sold": "56",
+      "status": "disabled"
+    },
+    {
+      "id": "game-03",
+      "image": "/valorant.webp",
+      "title": "Tài khoản Valorant night market",
+      "price": "15.000đ",
+      "sold": "19",
+      "status": "disabled"
+    }
+  ]
+}

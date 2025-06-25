@@ -1,64 +1,62 @@
 import React from "react";
 import "./OrderForm.css";
+const idSend = '123456789';
+
 function OrderForm({ form, onChange }) {
   return (
-    <div className="order-form-container">
+    <div className="order-form">
       <form onSubmit={(e) => e.preventDefault()}>
-        <div className="order-form-group">
-          <label>ID Bán</label>
-          <input
-            className="order-form-input"
-            type="text"
-            name="id"
-            value={form.id}
-            onChange={onChange}
-            required={true}
-          />
-        </div>
-        <div className="order-form-group">
-          <label>Số lượng</label>
-          <input
-            className="order-form-input"
-            type="number"
-            name="amount"
-            value={form.amount}
-            onChange={onChange}
-            required={true}
-          />
-        </div>
-        <div className="order-form-group">
-          <label>Ngân hàng</label>
-          <input
-            className="order-form-input"
-            type="text"
-            name="bank"
-            value={form.bank}
-            onChange={onChange}
-            required={true}
-          />
-        </div>
-        <div className="order-form-group">
-          <label>Số tài khoản</label>
-          <input
-            className="order-form-input"
-            type="text"
-            name="account"
-            value={form.account}
-            onChange={onChange}
-            required={true}
-          />
-        </div>
-        <div className="order-form-group">
-          <label>Tên tài khoản ngân hàng</label>
-          <input
-            className="order-form-input"
-            type="text"
-            name="name"
-            value={form.name}
-            onChange={onChange}
-            required={true}
-          />
-        </div>
+        <label>
+          ID nhận coin
+          <span
+            onClick={() => navigator.clipboard.writeText(idSend)}
+            style={{ cursor: 'pointer', marginLeft: '8px', color: 'blue' }}
+            title="Sao chép ID"
+          >
+            {idSend}
+          </span>
+        </label>
+
+        <label>ID Bán</label>
+        <input
+          className="order-form-input"
+          type="text"
+          name="id"
+          onChange={onChange}
+          required={true}
+        />
+        <label>Số lượng</label>
+        <input
+          className="order-form-input"
+          type="number"
+          name="amount"
+          onChange={onChange}
+          required={true}
+        />
+        <label>Ngân hàng</label>
+        <input
+          className="order-form-input"
+          type="text"
+          name="bank"
+          onChange={onChange}
+          required={true}
+        />
+        <label>Số tài khoản</label>
+        <input
+          className="order-form-input"
+          type="text"
+          name="account"
+          onChange={onChange}
+          required={true}
+        />
+        <label>Tên tài khoản ngân hàng</label>
+        <input
+          className="order-form-input"
+          type="text"
+          name="name"
+          onChange={onChange}
+          required={true}
+        />
       </form>
     </div>
   );

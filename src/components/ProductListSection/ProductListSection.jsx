@@ -4,8 +4,9 @@ import ProductCard from "../ProductCard/ProductCard";
 import "./ProductListSection.css";
 import { Link } from "react-router-dom";
 
-// Bỏ prop onCardClick
 const ProductListSection = ({ id, title, products }) => {
+  const data = Array.isArray(products) ? products : products.data || [];
+
   return (
     <section id={id} className="product-list-section">
       <div className="product-list-section__header">
@@ -15,13 +16,11 @@ const ProductListSection = ({ id, title, products }) => {
         </Link>
       </div>
       <div className="product-list-section__grid">
-        {products.map((product) => (
-          <ProductCard
-            key={product.id}
-            product={product}
-            categoryId={id}
-            // Không cần truyền onCardClick
-          />
+        {data.map((product) => (
+          <Link to={`/${id}`} key={product.id}>
+            <ProductCard
+              product={product}
+            /></Link>
         ))}
       </div>
     </section>

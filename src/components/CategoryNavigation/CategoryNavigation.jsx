@@ -6,7 +6,7 @@ const CategoryNavigation = ({ categories }) => {
     <nav className="category-nav">
       <ul>
         {categories.map((item) => (
-          <li key={item.text}>
+          <li key={item.id}>
             <a href={`#${item.id}`} className="category-nav__link">
               <span className="category-nav__icon">{item.icon}</span>
               {item.title}
