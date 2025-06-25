@@ -1,0 +1,19 @@
+.product-description-block {
+  background: #28254a;
+  border-radius: 1.5rem;
+  padding: 1.2rem 2rem;
+  color: #fff;
+  box-shadow: 0 2px 16px 0 #0002;
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: flex-start;
+}
+
+.product-description-block p {
+  font-size: 1rem;
+  color: #d1d0e0;
+  margin: 0;
+  line-height: 1.6;
+}

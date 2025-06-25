@@ -1,0 +1,73 @@
+.order-form-container {
+  background: #26244c;
+  border-radius: 1.5rem;
+  padding: 2rem 1.5rem;
+  box-shadow: 0 0.125rem 1rem 0 rgba(0, 0, 0, 0.1);
+  min-width: 21.25rem;
+  max-width: 24rem;
+  width: 100%;
+  color: #fff;
+  margin-bottom: 1.5rem;
+}
+
+.order-form-container form > div {
+  margin-bottom: 18px;
+}
+
+.order-form-container label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.order-form-container input[type="text"],
+.order-form-container input[type="number"] {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: none;
+  background: #1a1935;
+  color: #fff;
+  font-size: 15px;
+  outline: none;
+  margin-bottom: 2px;
+}
+
+.order-form-container input[type="text"]:focus,
+.order-form-container input[type="number"]:focus {
+  background: #23214a;
+}
+
+.order-form-group {
+  margin-bottom: 1.25rem;
+}
+
+.order-form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: 0.01em;
+}
+
+.order-form-input {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  border-radius: 0.75rem;
+  border: 0.125rem solid #23214a;
+  background: #18173a;
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.2s, box-shadow 0.2s;
+  box-sizing: border-box;
+}
+
+.order-form-input:focus {
+  border: 0.125rem solid #6c63ff;
+  box-shadow: 0 0 0 0.125rem #6c63ff33;
+  background: #23214a;
+}
