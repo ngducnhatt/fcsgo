@@ -42,20 +42,26 @@ function Empire() {
     setError("");
 
     const total = price * Number(form.amount || 1);
-    const message =
-      `💰 ĐƠN BÁN Value EMPIRE\n` +
-      `ID bán: \`${form.id}\`\n` +
-      `Số lượng: ${form.amount}\n` +
-      `Ngân hàng: ${form.bank}\n` +
-      `Số tài khoản: \`${form.account}\`\n` +
-      `Tên tài khoản: ${form.name}\n` +
-      `Thành tiền: ${total.toLocaleString()} VND`;
+
+    const embed = {
+      title: "🧾 ĐƠN BÁN VALUE EMPIRE",
+      color: 0x00b894,
+      fields: [
+        { name: "ID Bán", value: form.id, inline: true },
+        { name: "Số Lượng", value: `${form.amount}`, inline: true },
+        { name: "Ngân Hàng", value: form.bank, inline: true },
+        { name: "Số Tài Khoản", value: form.account, inline: true },
+        { name: "Tên Tài Khoản", value: form.name, inline: true },
+        { name: "Thành Tiền", value: `${total.toLocaleString()} VND`, inline: true }
+      ],
+      timestamp: new Date().toISOString()
+    };
 
     try {
       const res = await fetch(DISCORD_WEBHOOK_URL, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ content: message })
+        body: JSON.stringify({ embeds: [embed] })
       });
 
       if (res.ok) {
@@ -77,7 +83,7 @@ function Empire() {
       <div className="page-content">
         <div className="page-description">
           <ProductDescription content={<span>
-        
+            Hiện tại server đang có trục trặc các bạn bật 1.1.1.1 để order nhé ạ mk cảm ơn nha.
             Vui lòng chuyển Value trước khi tạo đơn.
             <br />
             Các đơn hàng sẽ được xử lý trong 5 phút-10 phút.
