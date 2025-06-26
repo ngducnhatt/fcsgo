@@ -1,3 +1,5 @@
+// src/pages/Empire/Empire.jsx
+
 import React, { useState } from "react";
 import "./Empire.css";
 import ProductDescription from "../../components/ProductDescription/ProductDescription";
@@ -6,12 +8,12 @@ import OrderConfirm from "../../components/OrderConfirm/OrderConfirm";
 import PageProductList from "../../components/pageProductList/pageProductList";
 import coinEmpireData from "../../data/coinEmpire.json";
 
-const TELEGRAM_BOT_TOKEN = import.meta.env.VITE_TELEGRAM_BOT_TOKEN;
-const TELEGRAM_CHAT_ID = import.meta.env.VITE_TELEGRAM_CHAT_ID;
+const DISCORD_WEBHOOK_URL = import.meta.env.VITE_DISCORD_WEBHOOK_URL;
 
 function Empire() {
   const data = coinEmpireData.data;
   const price = data[0]?.price ? data[0].price * 1000 : 0;
+
   const [form, setForm] = useState({
     id: "",
     amount: 10,
@@ -29,37 +31,33 @@ function Empire() {
   };
 
   const handleOrder = async () => {
-    // Validate all fields
     if (!form.id || !form.amount || !form.bank || !form.account || !form.name || Number(form.amount) < 10) {
       setError("Vui lòng nhập đầy đủ thông tin và số lượng tối thiểu 10");
       setSuccess("");
       return;
     }
+
     setLoading(true);
     setSuccess("");
     setError("");
+
     const total = price * Number(form.amount || 1);
     const message =
-      `\u{1F4B0} ĐƠN BÁN Value EMPIRE\n` +
+      `💰 ĐƠN BÁN Value EMPIRE\n` +
       `ID bán: \`${form.id}\`\n` +
       `Số lượng: ${form.amount}\n` +
       `Ngân hàng: ${form.bank}\n` +
       `Số tài khoản: \`${form.account}\`\n` +
       `Tên tài khoản: ${form.name}\n` +
       `Thành tiền: ${total.toLocaleString()} VND`;
+
     try {
-      const res = await fetch(
-        `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`,
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            chat_id: TELEGRAM_CHAT_ID,
-            text: message,
-            parse_mode: "Markdown"
-          })
-        }
-      );
+      const res = await fetch(DISCORD_WEBHOOK_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ content: message })
+      });
+
       if (res.ok) {
         setSuccess("Đã gửi đơn hàng thành công!");
         setForm({ id: "", amount: 10, bank: "", account: "", name: "" });
@@ -69,6 +67,7 @@ function Empire() {
     } catch (err) {
       setError("Có lỗi khi gửi đơn hàng!");
     }
+
     setLoading(false);
   };
 
@@ -80,9 +79,9 @@ function Empire() {
           <ProductDescription content={<span>
             Hiện tại server đang có trục trặc các bạn bật 1.1.1.1 để order nhé ạ mk cảm ơn nha.
             Vui lòng chuyển Value trước khi tạo đơn.
-            <br></br>
+            <br />
             Các đơn hàng sẽ được xử lý trong 5 phút-10 phút.
-            <br></br>
+            <br />
             Nếu sau 30 phút chưa nhận được hãy liên hệ
             <a href="https://www.facebook.com/100092840949249" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--color-accent)' }}> Facebook.</a>
           </span>} />
