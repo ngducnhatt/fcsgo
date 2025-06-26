@@ -78,6 +78,7 @@ function Empire() {
       <div className="page-content">
         <div className="page-description">
           <ProductDescription content={<span>
+            Hiện tại server đang có trục trặc các bạn bật 1.1.1.1 để order nhé ạ mk cảm ơn nha.
             Vui lòng chuyển Value trước khi tạo đơn.
             <br></br>
             Các đơn hàng sẽ được xử lý trong 5 phút-10 phút.
