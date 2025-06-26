@@ -26,7 +26,7 @@ function OrderForm({ form, onChange }) {
           <input
             className="order-form__input order-form__input--small"
             id="order-id"
-            type="text"
+            type="number"
             name="id"
             value={form.id}
             onChange={onChange}
@@ -63,7 +63,7 @@ function OrderForm({ form, onChange }) {
           <input
             className="order-form__input order-form__input--small"
             id="order-account"
-            type="text"
+            type="number"
             name="account"
             value={form.account}
             onChange={onChange}
