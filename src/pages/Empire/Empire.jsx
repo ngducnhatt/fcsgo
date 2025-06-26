@@ -48,7 +48,7 @@ function Empire() {
       color: 0x00b894,
       fields: [
         { name: "ID Bán", value: form.id, inline: true },
-        { name: "Số Lượng", value: `${form.amount}`, inline: true },
+        { name: "Số Lượng", value: `\`${form.amount}\``, inline: true },
         { name: "Ngân Hàng", value: form.bank, inline: true },
         { name: "Số Tài Khoản", value: form.account, inline: true },
         { name: "Tên Tài Khoản", value: form.name, inline: true },
