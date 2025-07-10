@@ -18,7 +18,7 @@ function OrderForm({ form, onChange }) {
               {idSend}
             </span>
             <br />
-            <span>Fcsgo.store | Lv70</span>
+            
           </label>
         </div>
         <div className="order-form__group">
