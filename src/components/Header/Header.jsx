@@ -27,7 +27,7 @@ const Header = ({ navItems }) => {
           {navItems &&
             navItems.map((item) => (
               <li key={item.id}>
-                <Link to={item.id} onClick={toggleMenu}>
+                <Link to={`/${item.id}`} onClick={toggleMenu}>
                   {item.title}
                 </Link>
               </li>

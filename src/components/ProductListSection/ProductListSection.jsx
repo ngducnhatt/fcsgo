@@ -11,7 +11,7 @@ const ProductListSection = ({ id, title, products }) => {
     <section id={id} className="product-list-section">
       <div className="product-list-section__header">
         <h2 className="product-list-section__title">{title}</h2>
-        <Link to={id} className="product-list-section__view-all">
+        <Link to={`/${id}`} className="product-list-section__view-all">
           Xem Thêm ›
         </Link>
       </div>
