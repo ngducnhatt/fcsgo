@@ -1,15 +1,19 @@
 import React from "react";
 import "./ProductBlock.css";
 function ProductBlock({ product }) {
+  const productData = product?.[0];
+  if (!productData) {
+    return null;
+  }
   return (
     <div className="product-header">
       <img
-        src={product[0].image}
-        alt={product[0].title}
+        src={productData.image}
+        alt={productData.title}
         className="product-logo"
       />
       <div className="product-title-group">
-        <h2 className="product-title">{product[0].title}</h2>
+        <h2 className="product-title">{productData.title}</h2>
       </div>
     </div>
   );
