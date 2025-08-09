@@ -1,5 +1,12 @@
 // src/context/ModalContext.jsx
-import React, { createContext, useState, useContext, useCallback } from "react";
+import React, {
+  createContext,
+  useState,
+  useContext,
+  useCallback,
+  useRef,
+  useEffect,
+} from "react";
 import Modal from "../components/Modal/Modal";
 
 // 1. Tạo Context
@@ -9,6 +16,7 @@ const ModalContext = createContext();
 export const ModalProvider = ({ children }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalContent, setModalContent] = useState(null);
+  const timeoutId = useRef(null);
 
   const openModal = useCallback((content) => {
     setModalContent(content);
@@ -17,8 +25,19 @@ export const ModalProvider = ({ children }) => {
 
   const closeModal = useCallback(() => {
     setIsModalOpen(false);
+    if (timeoutId.current) {
+      clearTimeout(timeoutId.current);
+    }
     // Có thể thêm hiệu ứng chờ trước khi xóa content
-    setTimeout(() => setModalContent(null), 300);
+    timeoutId.current = setTimeout(() => setModalContent(null), 300);
+  }, []);
+
+  useEffect(() => {
+    return () => {
+      if (timeoutId.current) {
+        clearTimeout(timeoutId.current);
+      }
+    };
   }, []);
 
   return (
