@@ -70,9 +70,10 @@ function Empire() {
       } else {
         setError("Gửi đơn hàng thất bại!");
       }
-    } catch (err) {
-      setError("Có lỗi khi gửi đơn hàng!");
-    }
+      } catch (err) {
+        console.error(err);
+        setError("Có lỗi khi gửi đơn hàng!");
+      }
 
     setLoading(false);
   };
