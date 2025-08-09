@@ -60,6 +60,7 @@ const Modal = ({ isOpen, onClose, product }) => {
              <a
                 href="https://www.facebook.com/100092840949249"
                 target="_blank"
+                rel="noopener noreferrer"
               >
             <button className="modal-buy-button">
                 Facebook
