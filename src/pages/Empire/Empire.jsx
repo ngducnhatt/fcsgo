@@ -70,7 +70,7 @@ function Empire() {
       } else {
         setError("Gửi đơn hàng thất bại!");
       }
-    } catch (err) {
+    } catch {
       setError("Có lỗi khi gửi đơn hàng!");
     }
 
